@@ -35,16 +35,40 @@
       padding: 2rem;
       background-color: #ffe6e6;
     }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      background: #fff5f5;
+    }
+    .product img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
     .popup {
       position: fixed;
-      top: 20%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(1);
       background: white;
       padding: 1.5rem;
       border: 2px solid #d50000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
       z-index: 1000;
+      animation: popup-bounce 0.4s ease;
+    }
+    @keyframes popup-bounce {
+      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
     }
     .popup button {
       margin-top: 1rem;
@@ -69,6 +93,7 @@
       font-size: 24px;
       cursor: pointer;
       z-index: 999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -91,6 +116,29 @@
     <a href="https://line.me/R/ti/p/@SiamchaiLine" style="color:white; background:red; padding:10px 20px; text-decoration:none; border-radius:5px;">แอดไลน์ตอนนี้</a>
   </div>
 
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="ทีวี">
+      <h3>ทีวี</h3>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="ตู้เย็น">
+      <h3>ตู้เย็น</h3>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="เครื่องซักผ้า">
+      <h3>เครื่องซักผ้า</h3>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="แอร์">
+      <h3>แอร์</h3>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150" alt="ตู้แช่">
+      <h3>ตู้แช่</h3>
+    </div>
+  </section>
+
   <div class="popup" id="popup">
     <p><strong>เว็บไซต์:</strong> สยามชัยปทุมธานี by น้องหมิง<br>
       <strong>ผู้ดูแล:</strong> ทีมงาน 5 คน<br>
@@ -103,5 +151,4 @@
     ✉
   </div>
 </body>
-    </html>
-    
+</html>
