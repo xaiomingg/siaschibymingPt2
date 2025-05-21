@@ -72,48 +72,6 @@
     .popup button:hover {
       background-color: #b71c1c;
     }
-    .chat-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #d50000;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      cursor: pointer;
-      z-index: 999;
-    }
-    .chat-box {
-      display: none;
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 300px;
-      background: white;
-      border: 2px solid #d50000;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      z-index: 999;
-      overflow: hidden;
-    }
-    .chat-box textarea {
-      width: 100%;
-      border: none;
-      padding: 0.5rem;
-      resize: none;
-    }
-    .chat-box .chat-send {
-      background: #d50000;
-      color: white;
-      padding: 0.5rem;
-      text-align: center;
-      cursor: pointer;
-    }
     .products {
       padding: 2rem;
     }
@@ -177,15 +135,15 @@
 
   <div class="banner">
     <h2>ยินดีต้อนรับ!</h2>
-    <p>เลือกชมสินค้าหรือแอดไลน์เพื่อพูดคุยกับทีมงานได้เลย</p>
-    <a href="https://line.me/R/ti/p/@SiamchaiLine" style="color:white; background:red; padding:10px 20px; text-decoration:none; border-radius:5px;">แอดไลน์ตอนนี้</a>
+    <p>เลือกชมสินค้าหรือเข้าสู่ระบบไลน์เพื่อพูดคุยกับทีมงานได้เลย</p>
+    <a href="https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1656223180&redirect_uri=https://line.me/R/ti/p/@SiamchaiLine&state=login&scope=profile%20openid" style="color:white; background:red; padding:10px 20px; text-decoration:none; border-radius:5px;">เข้าสู่ระบบไลน์เพื่อแชทกับแอดมิน</a>
   </div>
 
   <div class="popup" id="popup">
     <p><strong>เว็บไซต์:</strong> สยามชัยปทุมธานี by น้องหมิง</p>
     <p><strong>ผู้ดูแล:</strong> ทีมงาน 5 คน</p>
     <p><strong>ติดต่อ:</strong> แอดไลน์ @SiamchaiLine</p>
-    <p><strong>วิธีใช้งาน:</strong> แอดไลน์ก่อนเพื่อพูดคุยกับทีมงาน</p>
+    <p><strong>วิธีใช้งาน:</strong> กดเข้าสู่ระบบไลน์เพื่อแชทกับทีมงาน</p>
     <button onclick="document.getElementById('popup').style.display='none'">ปิด</button>
   </div>
 
@@ -205,19 +163,26 @@
         </div>
       </div>
     </div>
-    <!-- โซนสินค้าอื่นๆ ทีวี เครื่องซักผ้า ตู้เย็น ตู้แช่ คล้ายๆ กัน -->
+    <div class="product-section">
+      <h3>ทีวี</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="tv1.jpg" alt="ทีวี 32 นิ้ว">
+          <p>ทีวี 32 นิ้ว</p>
+          <button onclick="location.href='tv1.html'">ดูเพิ่มเติม</button>
+        </div>
+        <div class="product-card">
+          <img src="tv2.jpg" alt="ทีวี 43 นิ้ว">
+          <p>ทีวี 43 นิ้ว</p>
+          <button onclick="location.href='tv2.html'">ดูเพิ่มเติม</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
-    <p>© 2025 สยามชัยปทุมธานี by น้องหมิง - ติดต่อผ่านไลน์ @SiamchaiLine</p>
+    <p>© 2025 สยามชัยปทุมธานี by น้องหมิง - ติดต่อผ่านไลน์ <a href="https://line.me/R/ti/p/@SiamchaiLine" style="color: white; text-decoration: underline;">@SiamchaiLine</a></p>
   </footer>
-
-  <div class="chat-float" onclick="document.querySelector('.chat-box').style.display='block'">
-    ✉
-  </div>
-  <div class="chat-box">
-    <textarea rows="4" placeholder="พิมพ์ข้อความของคุณ..."></textarea>
-    <div class="chat-send">ส่งข้อความ</div>
-  </div>
 </body>
-</html>
+                                                    </html>
+                                                    
